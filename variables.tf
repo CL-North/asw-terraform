@@ -9,7 +9,7 @@ variable "bucket_prefix" {
     default     = "Totira-s3bucket-"
 }
 
-variable "tags" {
+variable "s3tags" {
     type        = map
     description = "mapping of tags to assign to the bucket."
     default     = {
