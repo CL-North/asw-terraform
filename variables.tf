@@ -6,12 +6,12 @@ variable "aws_region" {
 variable "bucket_prefix" {
     type        = string
     description = "Creates a unique bucket name beginning with the specified prefix."
-    default     = "my-s3bucket-"
+    default     = "Totira-s3bucket-"
 }
 
 variable "tags" {
     type        = map
-    description = "(Optional) A mapping of tags to assign to the bucket."
+    description = "mapping of tags to assign to the bucket."
     default     = {
         environment = "DEV"
         terraform   = "true"
@@ -20,7 +20,7 @@ variable "tags" {
 
 variable "versioning" {
     type        = bool
-    description = "(Optional) A state of versioning."
+    description = "state of versioning."
     default     = true
 }
 
