@@ -18,12 +18,6 @@ variable "s3tags" {
     }
 }
 
-variable "versioning" {
-    type        = bool
-    description = "state of versioning."
-    default     = true
-}
-
 variable "acl" {
     type        = string
     description = " Defaults to private "
