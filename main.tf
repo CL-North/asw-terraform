@@ -6,3 +6,10 @@ resource "aws_s3_bucket" "my-s3-bucket" {
   bucket_prefix = var.bucket_prefix
   tags = var.s3tags
 }
+
+resource "aws_s3_bucket_versioning" "s3-versioning" {
+  bucket = aws_s3_bucket.my-s3-bucket.id
+  versioning_configuration {
+    status = "Enabled"
+  }
+}
