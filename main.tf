@@ -13,3 +13,10 @@ resource "aws_s3_bucket_versioning" "s3-versioning" {
     status = "Enabled"
   }
 }
+
+/* We will define bucket policy here
+resource "aws_s3_bucket_policy" "s3-policy" {
+  bucket = aws_s3_bucket.my-s3-bucket.id
+  policy = policy.json
+}
+*/
