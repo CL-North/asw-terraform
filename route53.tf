@@ -45,3 +45,7 @@ resource "aws_route53_record" "www" {
   ttl     = "300"
   records = [aws_eip.lb.public_ip]
 }
+
+output "name_server" {
+    value = aws_route53_zone.totira.name_servers
+}
