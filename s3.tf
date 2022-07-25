@@ -21,6 +21,21 @@ resource "aws_s3_bucket_policy" "s3-policy" {
 }
 */
   
+/* S3 Bucket ACL
+resource "aws_s3_bucket_acl" "s3_bucket_acl" {
+  bucket = aws_s3_bucket.my-s3-bucket.id
+  acl    = "private"
+}
+*/
+  
+/* S3 Public access 
+resource "aws_s3_bucket_public_access_block" "s3-public" {
+  bucket = aws_s3_bucket.my-s3-bucket.id
+  block_public_acls   = true
+  block_public_policy = true
+}
+*/
+  
 output "s3_bucket_name" {
   value = aws_s3_bucket.my-s3-bucket.id
 }
