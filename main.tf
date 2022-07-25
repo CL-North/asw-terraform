@@ -21,7 +21,7 @@ resource "aws_s3_bucket_policy" "s3-policy" {
 }
 */
   
-/* S3 Bucket Permissions
+/* S3 Bucket Permissions [Terraform state is written to the key path/to/my/key]
 
 terraform {
   backend "s3" {
