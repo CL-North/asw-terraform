@@ -9,12 +9,12 @@ resource "aws_ses_configuration_set" "totira_ses_conf" {
 
 // SES Domain identity
 resource "aws_ses_domain_identity" "totira_ses_domain_identity" {
-  domain = "example.com"
+  domain = "totira.com"
 }
 
 resource "aws_route53_record" "totira_ses_verification_record" {
   zone_id = "ABCDEFGHIJ123"
-  name    = "_amazonses.example.com"
+  name    = "_amazonses.totira.com"
   type    = "TXT"
   ttl     = "600"
   records = [aws_ses_domain_identity.totira_ses_domain_identity.verification_token]
@@ -26,7 +26,7 @@ resource "aws_ses_email_identity" "totira_email" {
 }
 
 // SES identity policy
-// Reuired SES domain identity
+// Note: SES domain identity should be in place
 
 data "aws_iam_policy_document" "totira_iam" {
   statement {
