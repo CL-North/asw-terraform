@@ -1,7 +1,7 @@
 // Route53 Public Zone
 
 resource "aws_route53_zone" "primary" {
-  name = "totira    .com"
+  name = "totira.com"
 }
 
 // Route53 Public Subdomain Zone
