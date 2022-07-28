@@ -14,6 +14,9 @@ resource "aws_s3_bucket_versioning" "s3-versioning" {
   }
 }
 
+resource "aws_ami" "" {
+  name = ""
+}
 /* S3 Bucket policy 
 resource "aws_s3_bucket_policy" "s3-policy" {
   bucket = aws_s3_bucket.my-s3-bucket.id
@@ -51,4 +54,6 @@ output "s3_bucket_domain_name" {
 output "s3_bucket_zone_id" {
   value = aws_s3_bucket.my-s3-bucket.hosted_zone_id 
 }
+
+// output
 
