@@ -53,5 +53,5 @@ output "s3_bucket_zone_id" {
   value = aws_s3_bucket.my-s3-bucket.hosted_zone_id 
 }
 
-// output
+// outputs
 
