@@ -14,9 +14,7 @@ resource "aws_s3_bucket_versioning" "s3-versioning" {
   }
 }
 
-resource "aws_ami" "" {
-  name = "Ali test"
-}
+
 /* S3 Bucket policy 
 resource "aws_s3_bucket_policy" "s3-policy" {
   bucket = aws_s3_bucket.my-s3-bucket.id
